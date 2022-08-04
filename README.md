@@ -21,3 +21,14 @@ Day 0: System Setup and AWS Account creation
 [Day 9: 17th Aug - Assignment-2]
 
 [Day 10: 18th Aug - Assignment-3]
+
+
+## Resource References from earlier bootcamp
+- For Terraform Pokeman exercise 
+https://github.com/dharani-sowndharya/infra-bootcamp
+
+- CI/ CD Pipelines
+https://github.com/ArchanaChillala/welcome-demo
+
+- Terraform (Hardik)
+https://github.com/shpweb/terraform_aws
