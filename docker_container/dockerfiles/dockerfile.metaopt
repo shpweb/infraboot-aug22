@@ -1,0 +1,9 @@
+FROM openjdk:alpine
+
+ADD target/app/BOOT-INF/lib /app/lib
+ADD target/app/META-INF /opt/META-inf
+ADD target/app/BOOT-INF/classes /app/
+
+EXPOSE 8080
+
+ENTRYPOINT ["java","-cp","app:app/lib/*", "org.boot.services.metadata.Application"]

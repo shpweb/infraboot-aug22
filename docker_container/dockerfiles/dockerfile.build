@@ -1,0 +1,14 @@
+FROM maven
+
+WORKDIR /workspace/app
+
+# build maven .m2 cache as layer for resuse
+COPY pom.xml pom.xml
+RUN mvn dependency:go-offline -B
+
+COPY src .
+RUN mvn package -DskipTests
+
+EXPOSE 8080
+
+ENTRYPOINT ["java","-jar", "-Xms256m", "-Xms512m", "target/metadata-service.jar"]
