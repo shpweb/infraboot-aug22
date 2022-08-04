@@ -18,8 +18,10 @@ $ kubectl describe rs dobby-rs
 $ kubectl delete pod dobby-rs-*****
 # notice new pods spin up immediately
 
+# Pod with Label
+$ kubectl get pods --show-lables
 
-# fun part - add Pod with same label
+# fun part - add Pod with same label (i.e. dobby-pod)
 $ kubectl apply -f dobby-with-labels.yaml
 # remove label and apply again
 $ kubectl apply -f dobby-with-labels.yaml
