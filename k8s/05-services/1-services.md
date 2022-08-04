@@ -17,7 +17,8 @@ $ kubectl describe endpoints dobbysvc
 
 # goto node and access pod via service
 $ minikube ssh
-$ curl 10.98.249.28:4444/meta
+$ curl 10.98.249.28:4444/meta.   //svc cluster ip
+# run above command multiple time and observe it connects to different node IP
 
 # delete the rs and observe that pods , eps are not aviable but the service is still the same
 $ kubectl delete rs dobby-rs
@@ -30,7 +31,7 @@ $ kubectl describe endpoints dobbysvc
 
 # goto node and access pod via service - observe the same IP is connecting as ep
 $ minikube ssh
-$ curl 10.98.249.28:4444/meta   //endpoing IP
+$ curl 10.98.249.28:4444/meta   //svc cluster ip
 
 # delete the pod and verify that new pod created with new IP and EP is updated with the new iP
 $ kubectl delete pod dobby-rs-**** 
