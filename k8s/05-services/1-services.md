@@ -37,6 +37,8 @@ $ kubectl delete pod dobby-rs-****
 $ minikube ssh
 $ curl 10.98.249.28:4444/meta
 
+## so if you add pods, delete pods - your service is not getting impacted
+
 #### Don't run below 2 steps - directly go to NodePort
 # access dobby in loop and observe request going to different pods
 $ minikube ssh
