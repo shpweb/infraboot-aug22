@@ -11,7 +11,7 @@ $ docker logs {containerId}
 $ docker pull busybox
 $ docker run busybox
 $ docker ps -a
-$ docker run busybox echo "hello sUnit..."
+$ docker run busybox echo "hello folks..."
 $ docker logs {containerId}
 $ docker run -it busybox sh
 # open another terminal window

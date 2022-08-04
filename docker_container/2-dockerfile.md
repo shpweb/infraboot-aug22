@@ -4,7 +4,7 @@
 $ docker run -p 80:80 --name myweb -d nginx
 $ docker exec -it myweb /bin/bash 
 $ cd /usr/share/nginx/html
-$ echo "Sunit Parekh" > test.html
+$ echo "TW Bootcamp" > test.html
 $ exit
 $ docker commit myweb mynginx:v1
 $ docker run -p 81:80 --name myweb2 -d mynginx:v1
