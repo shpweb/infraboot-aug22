@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: dobby
 spec:
-  replicas: 6
+  replicas: 4
   selector:
     matchLabels:
       app: dobby-pod
@@ -31,4 +31,4 @@ spec:
             periodSeconds: 3
           env:
             - name: VERSION
-              value: "4.0"
+              value: "5.0"

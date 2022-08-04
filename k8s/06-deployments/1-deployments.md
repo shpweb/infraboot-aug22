@@ -11,21 +11,28 @@ $ watch kubectl get ep
 # Understand problems with just ReplicaSet
 ```s
 # change in replicset
+# one svc resource should be up and running, if not then make it up (../05-services/dobby-svc.yaml)
 $ kubectl apply -f dobby-rs-env-version.yaml
-$ curl "k8s-master:30003/version"
+$ minikube ip 
+$ minikube ssh
+$ curl "192.168.49.2:4444/version"       //svc cluster IP or pod ip
 
 # Change version in rs and apply again
 
 $ kubectl apply -f dobby-rs-env-version.yaml
-$ curl "k8s-master:30003/version"
+$ curl "k8s-master:30003/version"                   //svc cluster IP or pod ip
 # observe version
 
 # now delete RS and apply again
 $ kubectl delete rs dobby-rs
 $ kubectl apply -f dobby-rs-env-version.yaml
-$ curl "k8s-master:30003/version"
+$ curl "k8s-master:30003/version"                  //svc cluster IP
 # observe version
+
+# delete rs
+$ kubectl delete rs dobby-rs
 ```
+
 
 # Deploy deployment
 ```s
@@ -33,7 +40,7 @@ $ kubectl apply -f dobby-deployment.yaml
 # observe deployment, replicaset and pods - along with our previous service and endpoints getting attached to new pods
 
 
-$ curl "k8s-master:30003/version"
+$ curl "k8s-master:30003/version"                  //svc cluster IP
 # change version to 2.0
 $ kubectl apply -f dobby-deployment.yaml
 $ curl "k8s-master:30003/version"
