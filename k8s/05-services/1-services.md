@@ -39,17 +39,17 @@ $ curl 10.98.249.28:4444/meta
 
 ## so if you add pods, delete pods - your service is not getting impacted
 
-#### Don't run below 2 steps - directly go to NodePort
-# access dobby in loop and observe request going to different pods
-$ minikube ssh
-$ while true; do sleep 2; curl "http://10.10.10.3:30003/meta"; echo -e '    '$(date);done
-
 
 # to access via DNS name, get inside containers
 $ kubectl exec hello-node -it -- sh
 $ wget -qO- dobbysvc:4444/meta
 $ while true; do sleep 2; wget -qO- "http://dobbysvc:4444/meta"; echo -e '    '$(date);done
 $ ping dobbysvc
+
+#### Don't run below 2 steps - directly go to NodePort
+# access dobby in loop and observe request going to different pods
+$ minikube ssh
+$ while true; do sleep 2; curl "http://10.10.10.3:30003/meta"; echo -e '    '$(date);done
 
 ```
 
