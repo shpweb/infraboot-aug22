@@ -74,7 +74,7 @@ $ while true; do sleep 2; curl "192.168.49.2:30003/meta"; echo -e '    '$(date);
 
 ### LoadBalancer, connect to K8S cluster on Cloud Service provider like Digital Ocean
 ```s
-# connect to AWS cluster [Use - ]
+# connect to AWS cluster --> Use - [KOPS Reference](https://github.com/shpweb/k8s/tree/main/AWS_k8s)
 $ kubectl apply -f ../04-replicasets/dobby-rs.yaml
 $ kubectl apply -f dobby-svc-lb.yaml
 # get ip from Load Balancer (note down external-ip)
