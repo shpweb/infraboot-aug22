@@ -11,11 +11,15 @@ $ watch kubectl get ep
 # Understand problems with just ReplicaSet
 ```s
 # change in replicset
-# one svc resource should be up and running, if not then make it up (../05-services/dobby-svc.yaml)
+# Node svc resource should be up and running, if not then make it up (../05-services/dobby-svc-np.yaml)
 $ kubectl apply -f dobby-rs-env-version.yaml
 $ minikube ip 
 $ minikube ssh
 $ curl "192.168.49.2:4444/version"       //svc cluster IP or pod ip
+
+#check the version in while loop
+$ while true; do sleep 1; curl "192.168.49.2:30003/version"; echo -e '    '$(date);done
+
 
 # Change version in rs and apply again
 
