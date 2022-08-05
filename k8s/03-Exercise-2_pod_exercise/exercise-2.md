@@ -1,9 +1,8 @@
 # deploy application
 
-$ kubectl apply -f metadata-service.yml
-
-$ kubectl get pods -o wide
-$ kubeclt describe pod metadata-app
+$ kubectl apply -f metadata-service.yml  
+$ kubectl get pods -o wide  
+$ kubeclt describe pod metadata-app  
 
 
 # get into the node to hit API endpoints
