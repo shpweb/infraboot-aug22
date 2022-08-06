@@ -11,11 +11,15 @@ $ watch kubectl get ep
 # Understand problems with just ReplicaSet
 ```s
 # change in replicset
-# one svc resource should be up and running, if not then make it up (../05-services/dobby-svc.yaml)
+# Node svc resource should be up and running, if not then make it up (../05-services/dobby-svc-np.yaml)
 $ kubectl apply -f dobby-rs-env-version.yaml
 $ minikube ip 
 $ minikube ssh
 $ curl "192.168.49.2:4444/version"       //svc cluster IP or pod ip
+
+#check the version in while loop
+$ while true; do sleep 1; curl "192.168.49.2:30003/version"; echo -e '    '$(date);done
+
 
 # Change version in rs and apply again
 
@@ -47,23 +51,29 @@ $ curl "k8s-master:30003/version"
 # change version to 3.0
 $ kubectl apply -f dobby-deployment.yaml
 $ curl "k8s-master:30003/version"
+``` 
 
 # how to see all revisions of dployment
+```s
 $ kubectl rollout history deployment/dobby
 # notice all 3 revisions deployed so far, however, the field change-cause is empty
+
 # how to set change cause
 $ kubectl annotate deployment dobby kubernetes.io/change-cause="my message" --record=false --overwrite=true
 $ kubectl rollout history deployment/dobby
 $ kubectl rollout history deployment/dobby --revision=3
 
+#Don't run below#
 $ export GIT_COMMIT=$(git log -1 --format=%h)
 $ kubectl annotate deployment dobby kubernetes.io/change-cause="$GIT_COMMIT" --record=false --overwrite=true
 $ kubectl rollout history deployment/dobby
 
 $ kubectl apply -f dobby-deployment-with-annotation.yaml
 $ kubectl rollout history deployment/dobby
+```
 
 # rollback
+```s
 $ kubectl rollout undo deployment/dobby
 $ kubectl rollout history deployment/dobby
 # notice reuse of previous replicaset

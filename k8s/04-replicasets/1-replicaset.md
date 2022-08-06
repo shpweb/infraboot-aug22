@@ -18,23 +18,35 @@ $ kubectl describe rs dobby-rs
 $ kubectl delete pod dobby-rs-*****
 # notice new pods spin up immediately
 
-# Pod with Label
-$ kubectl get pods --show-lables
-
-# fun part - add Pod with same label (i.e. dobby-pod)
-$ kubectl apply -f dobby-with-labels.yaml
-# remove label and apply again
-$ kubectl apply -f dobby-with-labels.yaml
 
 # increase replica count to 6 and apply again
 $ kubectl apply -f dobby-rs.yaml
 # decrease replica count to 2 and apply again
 $ kubectl apply -f dobby-rs.yaml
 
+# Pod with Label
 
-# shutdown one worker node and see pods are recreated on remaining nodes
+$ kubectl get pods --show-lables
 
+# fun part - add Pod with same label (i.e. dobby-pod)
+$ kubectl apply -f dobby-with-labels.yaml
+# observe that it will create and terminate again because control manager maintain the desired state
+
+# remove label and apply again
+$ kubectl apply -f dobby-with-labels.yaml
+
+# Now delete RS (all pods) and create a simple pod with same label 
 $ kubectl delete rs dobby-rs
+$ kubectl apply -f dobby-with-labels.yaml
+
+#observe that it will create one pod and if you create rs with same label then it creates the desired no of pods
+$ kubectl apply -f dobby-rs
+
+#if we delete rs, it will delete all the pods, even the one created as a single pod because rs see the lable 
+$ kubectl delete rs dobby-rs
+
+# so it is all about the label and selector for RS and with reconcillaion loop. 
+
 ```
 
 # showcase readiness and liveness probes

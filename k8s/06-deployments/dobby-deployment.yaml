@@ -31,4 +31,8 @@ spec:
             periodSeconds: 3
           env:
             - name: VERSION
+<<<<<<< HEAD
               value: "4.0"
+=======
+              value: "2.0"
+>>>>>>> b6111dbca353a0f204c4e7c7f012cbd0de7b0503
