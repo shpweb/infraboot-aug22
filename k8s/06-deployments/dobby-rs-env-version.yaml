@@ -19,4 +19,4 @@ spec:
             - containerPort: 4444
           env:
             - name: VERSION
-              value: "2.0"              
+              value: "3.0"              

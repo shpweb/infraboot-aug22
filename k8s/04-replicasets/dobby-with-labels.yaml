@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: dobby
   labels:
-    app: dobby-pod-test
+    app: dobby-pod
 spec:
   containers:
   - name: dobby

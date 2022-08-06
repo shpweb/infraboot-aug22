@@ -33,4 +33,4 @@ spec:
             periodSeconds: 3
           env:
             - name: VERSION
-              value: "6.0"  
+              value: "7.0"  
