@@ -3,8 +3,9 @@
 - add git path in global env tool (add just git command will do)
 
 ## Jenkins Basis Job & Pipeline (first couple of projects)
-https://github.com/schoolofdevops/learn-jenkins/blob/master/continuous-delivery/chapters/040_creating_first_job.md  
-https://github.com/schoolofdevops/learn-jenkins/blob/master/continuous-delivery/chapters/060_building_jobs_pipeline.md  
+- [My First Project on Jenkins](https://github.com/schoolofdevops/learn-jenkins/blob/master/continuous-delivery/chapters/040_creating_first_job.md)  
+- [Couple of More Jobs and create Pipeline](https://github.com/schoolofdevops/learn-jenkins/blob/master/continuous-delivery/chapters/060_building_jobs_pipeline.md)  
+- [Automatically triggering a Jenkins Build on every Code Push Event](https://www.linkedin.com/pulse/automate-jenkins-build-job-srikant-pandey/?trk=related_artice_Automatically%20triggering%20a%20Jenkins%20Build%20on%20every%20Code%20Push%20Event_article-card_title)
 
 ### Further Read
 https://www.jenkins.io/doc/book/pipeline/  
