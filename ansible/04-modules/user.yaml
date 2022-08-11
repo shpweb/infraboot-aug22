@@ -1,0 +1,10 @@
+-
+  name: 'Create a new user in remote server'
+  hosts: myec2
+  tasks:
+    -
+      name: 'create a new web user'
+      user:
+          name: web_user
+          uid: 1040
+          group: 1000
