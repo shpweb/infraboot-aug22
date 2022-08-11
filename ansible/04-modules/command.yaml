@@ -1,0 +1,21 @@
+-
+  name: 'view host file entry'
+  hosts: myec2
+  tasks: 
+    -
+      name: 'view host file entry'
+      command: 'cat /etc/hosts' 
+    -
+      name: 'create a file'
+      command: 'touch tw.txt chdir=/home/centos/'
+    -
+      name: 'create a directory'
+      command: 'mkdir folder chdir=/home/centos/ creates=folder'  
+    #-
+    #  name: 'hello world'
+    #  shell: | 
+    #    echo 'Hello TWers' > /home/centos/tw.txt   
+    #-
+    #  name: 'append file'
+    #  shell: | 
+    #    echo 'welcome to bootcamp' >> /home/centos/tw.txt

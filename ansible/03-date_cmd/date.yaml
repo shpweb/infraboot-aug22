@@ -1,0 +1,7 @@
+-
+  name: 'run and print date command'
+  hosts: localhost
+  tasks: 
+    -
+      name: "print date"
+      script: date.sh

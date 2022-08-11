@@ -1,7 +1,0 @@
--
-  name: 'view host file entry'
-  hosts: localhost
-  tasks: 
-    -
-      name: 'view host file entry'
-      command: 'cat /etc/hosts'

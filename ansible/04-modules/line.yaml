@@ -1,0 +1,7 @@
+-
+  name: Add DNS server to resolv.conf
+  hosts: localhost
+  tasks:
+    - lineinfile:
+        path: /Users/hardik.patel/demo.txt
+        line: 'nameserver 10.1.250.10' 

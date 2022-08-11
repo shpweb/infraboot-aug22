@@ -1,0 +1,13 @@
+-
+  name: 'view host file entry'
+  hosts: localhost
+  tasks: 
+    -
+      name: 'view host file entry'
+      command: 'touch /Users/hardik.patel/tw.txt'
+      register: "output"
+    -
+      name: 'view host file entry'
+      shell: 'cat /etc/hosts'
+      register: "output"  
+    - debug: var=output.stdout_lines

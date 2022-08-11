@@ -1,0 +1,8 @@
+-
+  name: Start the service in ec2
+  hosts: myec2
+  tasks:
+    - name: 'Start the httpd service'
+      ansible.builtin.service:
+        name: httpd
+        state: started
