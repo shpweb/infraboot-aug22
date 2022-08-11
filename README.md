@@ -10,7 +10,7 @@ Day 0: System Setup and AWS Account creation
 
 [Day 4: 9th Aug - IaC & Terraform]
 
-[Day 5: 10th Aug - DevOps]
+[Day 5: 10th Aug - DevOps](./devops)
 
 [Day 6: 11th Aug - Observability]
 
