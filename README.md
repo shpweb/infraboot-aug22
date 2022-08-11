@@ -33,5 +33,3 @@ https://github.com/ArchanaChillala/welcome-demo
 - Terraform (Hardik)
 https://github.com/shpweb/terraform_aws
 
-- Assignment 
-https://github.com/abinmn/to-do-app-infra
