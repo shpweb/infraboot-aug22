@@ -8,10 +8,10 @@
 - [Automatically triggering a Jenkins Build on every Code Push Event](https://www.linkedin.com/pulse/automate-jenkins-build-job-srikant-pandey/?trk=related_artice_Automatically%20triggering%20a%20Jenkins%20Build%20on%20every%20Code%20Push%20Event_article-card_title)
 
 ### Further Read
-https://www.jenkins.io/doc/book/pipeline/  
-https://www.youtube.com/watch?v=IOUm1lw7F58&t=550s  
-https://www.youtube.com/watch?v=8vksQ_6lkhU&list=PLvBBnHmZuNQJeznYL2F-MpZYBUeLIXYEe  
-https://github.com/schoolofdevops/learn-jenkins
+- [Pipeline- Jenkins Official Docs](https://www.jenkins.io/doc/book/pipeline/)  
+- [YouTube Videos by Darin Pope - Jenkins](https://www.youtube.com/watch?v=IOUm1lw7F58&t=550s)  
+- [Jenkins Tutorials by Darin Pope](https://www.youtube.com/watch?v=8vksQ_6lkhU&list=PLvBBnHmZuNQJeznYL2F-MpZYBUeLIXYEe)  
+- [GitHub Repo for Learn-Jenkins](https://github.com/schoolofdevops/learn-jenkins)
 
 
 ### Build pipeline for cart
