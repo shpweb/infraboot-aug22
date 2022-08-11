@@ -14,7 +14,7 @@
 - [GitHub Repo for Learn-Jenkins](https://github.com/schoolofdevops/learn-jenkins)
 
 
-### Build pipeline for cart
+### Build pipeline for cart - Example Pipeline Demo
 https://github.com/schoolofdevops/ultimate-devops-bootcamp/blob/master/chapters/090_carts.md  
 
 https://github.com/samarpit1111/devops_pipeline_demo
