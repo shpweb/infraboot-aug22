@@ -3,4 +3,4 @@ localhost ansible_connection=local
 13.127.175.59
 [myec2:vars]
 ansible_user=root
-ansible_ssh_pass=Hardik$18882
+ansible_ssh_pass=TWdemo#123
