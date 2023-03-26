@@ -61,10 +61,16 @@ $ while true; do sleep 2; curl "http://10.10.10.3:30003/meta"; echo -e '    '$(d
 ```
 
 ### NodePort [nodeport exposes ep outside the cluster so use the  Node (in our case) minikube IP]
+- Ideally it can be accessed outside of Node by command: 
+```s
+curl <Node-IP>:<Node-Port>
+```
+
+- In our case, Kuberenetes network is minikube only and Node is minikube itself so nodeport can be tested withing minikube (ssh to it) by curl to minikube-IP:NodePort
 ```s
 $ kubectl apply -f ../04-replicasets/dobby-rs.yaml
 $ kubectl apply -f dobby-svc-nodeport.yaml
-$ minikube ip   # vagrant box IP - 10.10.10.2, 10.10.10.3, 10.10.10.4, 10.10.10.5
+$ minikube ip   # 192.168.49.2
 $ minikube ssh
 $ while true; do sleep 2; curl "192.168.49.2:30003/meta"; echo -e '    '$(date);done
 
